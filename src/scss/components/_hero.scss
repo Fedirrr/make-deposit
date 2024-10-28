@@ -1,0 +1,124 @@
+.hero__container {
+  width: 100%;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero__wrapper {
+  padding: 20px;
+  color: white;
+}
+
+.hero__title {
+  margin-bottom: 32px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.hero__subtitle {
+  margin-bottom: 24px;
+  font-size: 18px;
+}
+
+.hero__payment-type {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.cardPayment {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(6, 1fr); /* 7 колонок при ширині 1440px */
+
+  @media (max-width: 1440px) {
+    grid-template-columns: repeat(6, 1fr); /* 6 колонок при менших екранах */
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(5, 1fr); /* 5 колонок для середніх екранів */
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr); /* 4 колонки для планшетів */
+  }
+
+  @media (max-width: 425px) {
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки для мобільних */
+  }
+}
+
+.cardPayment__container {
+  background-color: #2c2f36;
+  position: relative;
+  padding: 20px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  min-height: 103px;
+  cursor: pointer;
+
+  @media (max-width: 425px) {
+    min-height: 80px;
+  }
+}
+
+.cardPayment__image {
+  width: 48px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.cardPayment__name {
+  font-size: 16px;
+  font-weight: 600;
+
+  @media (max-width: 425px) {
+    font-size: 10px;
+    font-weight: 800;
+  }
+}
+
+.cardPayment__commission {
+  font-size: 14px;
+  font-weight: 400;
+  opacity: 0.5;
+
+  @media (max-width: 425px) {
+    font-size: 8px;
+    font-weight: 400;
+  }
+}
+
+.card-tab {
+  position: absolute;
+  top: -7px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-transform: uppercase;
+  padding: 3px 18px;
+  font-size: 8px;
+  font-weight: bold;
+  border-radius: 2px;
+
+  &--popular {
+    background-color: #2D69EB;
+  }
+
+  &--trusted {
+    background-color: #EB4D4B;
+  }
+
+  &--default {
+    background-color: #2D69EB;
+  }
+
+  @media (max-width: 768px) {
+    padding: 3px 12px;
+    font-size: 6px;
+  }
+}

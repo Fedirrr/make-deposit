@@ -1,0 +1,123 @@
+.table-container {
+  .table-wrapper {
+    width: 100%;
+
+    @media only screen and (max-width: 1024px) {
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch; /* Для плавного скролу на iOS */
+    }
+
+    table {
+      width: 100%;
+      min-width: 600px;
+      border-collapse: collapse;
+    }
+
+
+    tr {
+      border-bottom: 1px solid #1C1A1A;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    td {
+      padding: 12px;
+      text-align: center;
+      flex: 1 1 100px;
+
+      &.cell--left {
+        text-align: left;
+        width: 150px;
+      }
+
+      .transaction-item {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        &__image-wrapper {
+          background-color: #30363E;
+          padding: 0 3px;
+          border-radius: 10px;
+          width: 48px;
+          height: 48px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+          }
+        }
+
+        &__details {
+          text-align: left;
+          width: 150px;
+
+          &__top-text {
+            font-weight: bold;
+            color: white;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+
+          &__bottom-text {
+            color: #8c8c8c;
+            font-size: 12px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+        }
+      }
+    }
+  }
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 56px;
+
+  &__title {
+    margin: 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+  }
+
+  &__sort-button {
+    background-color: #30363E;
+    padding: 7px;
+    cursor: pointer;
+    border-radius: 4px;
+
+    svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
+
+.showMoreWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+.showMoreBtn {
+  padding: 12px 102px;
+  color: white;
+  background-color: #F9484B;
+  font-size: 14px;
+  font-weight: 900;
+  outline: none;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}

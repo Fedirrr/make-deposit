@@ -1,0 +1,298 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7); /* Темний фон */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #2c2f36;
+  border-radius: 10px;
+  width: 710px;
+  position: relative;
+  color: white;
+
+  @media (max-width: 768px) {
+    width: 425px;
+  }
+  @media (max-width: 425px) {
+    width: 320px;
+
+  }
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 32px 24px 32px;
+}
+
+.balance-section {
+  background-color: #2D69EB;
+  padding: 12px;
+  text-align: center;
+}
+
+.payment-container {
+  padding: 24px 32px;
+
+  @media (max-width: 768px) {
+    padding: 20px 16px 24px;
+  }
+  @media (max-width: 425px) {
+    padding: 20px 16px 24px;
+  }
+}
+
+.payment-wrapper {
+  width: 647px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+
+  }
+  @media (max-width: 425px) {
+    width: 100%;
+
+  }
+}
+
+.payment-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #30363E;
+  padding: 16px 18px;
+  position: relative;
+  border-radius: 9px;
+
+  @media (max-width: 768px) {
+    gap: 10px;
+    border-radius: 4px;
+  }
+  @media (max-width: 425px) {
+    gap: 10px;
+    border-radius: 4px;
+  }
+}
+
+.modal__payment-info-content {
+  display: flex;
+  align-items: center;
+}
+
+.payment-info__image img {
+  width: 50px;
+  height: 38px;
+
+  @media (max-width: 768px) {
+    width: 36px;
+    height: 27px;
+  }
+
+  @media (max-width: 425px) {
+    width: 36px;
+    height: 27px;
+  }
+
+}
+
+.payment-info__details {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-left: 16px;
+  font-size: 14px;
+
+
+  @media (max-width: 768px) {
+    font-size: 10px;
+  }
+  @media (max-width: 425px) {
+    font-size: 10px;
+  }
+}
+
+.back-link {
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+.close-icon {
+  cursor: pointer;
+  font-size: 24px;
+}
+
+
+.balance-title {
+  color: white;
+  font-weight: bold;
+}
+
+.balance-amount {
+  color: white;
+  font-size: 20px;
+}
+
+
+.small-text {
+  color: #8C8C8C;
+  font-size: 12px;
+}
+
+.payment-dropdown {
+  background-color: #30363E;
+  border-radius: 8px;
+  margin-top: 10px;
+  padding: 12px;
+  max-height: 150px;
+  overflow-y: auto;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.payment-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.payment-dropdown li {
+  color: white;
+  margin: 8px 0;
+  padding: 8px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #4C84FF;
+    border-radius: 4px;
+  }
+}
+
+.amount-list__item {
+  padding: 10px 36px;
+  background-color: #30363E;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  @media (max-width: 768px) {
+    padding: 10px 9px;
+    font-size: 12px;
+  }
+  @media (max-width: 425px) {
+    padding: 10px 9px;
+    font-size: 12px;
+  }
+
+  &:hover {
+    background-color: #3a3f47;
+    color: #ffffff;
+  }
+}
+
+.amount-input {
+  text-align: center;
+  width: 100%;
+  background-color: #30363E;
+  color: white;
+  border: none;
+  outline: none;
+  padding: 12px 0;
+}
+
+.amount-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  span {
+    padding: 24px 0 18px;
+  }
+
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    padding: 0
+  }
+}
+
+.deposit-button {
+  width: 100%;
+  padding: 13px 0;
+  background-color: #F9484B;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 32px;
+  font-weight: 900;
+  font-size: 16px;
+}
+
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.amount-section-container {
+  width: 647px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+  @media (max-width: 425px) {
+    width: 100%;
+  }
+}
+
+.amountSpan {
+  font-weight: 500;
+  font-size: 14px;
+  opacity: 50%;
+  @media (max-width: 768px) {
+    font-size: 12px;
+  }
+  @media (max-width: 425px) {
+    font-size: 12px;
+  }
+}
+
+.promoInput-section{
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.deposit-button:disabled {
+  background-color: #999;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.deposit-button:hover {
+  background-color: #ff6b6b;
+}
+
+.deposit-button:active {
+  background-color: #e63946;
+}

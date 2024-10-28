@@ -1,0 +1,181 @@
+.navbar {
+  background-color: #20242A;
+  box-shadow: 0 2px 7px 0 #0000005E;
+  padding: 10px 32px;
+
+  &__container {
+    width: 100%;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    &-image {
+      img {
+        width: auto;
+        height: auto;
+      }
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+
+    @media (max-width: 768px) {
+      gap: 10px;
+    }
+
+    &-icons {
+      ul {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        @media (max-width: 768px) {
+          display: none;
+        }
+      }
+
+      li {
+        position: relative;
+        padding: 0 16px;
+        cursor: pointer;
+        color: white;
+        font-size: 18px;
+
+        @media (max-width: 768px) {
+          padding: 0 8px;
+        }
+
+        &.notification {
+          .notification-badge {
+            position: absolute;
+            top: 3px;
+            right: 17px;
+            width: 6px;
+            height: 6px;
+            background-color: red;
+            border-radius: 50%;
+            border: 2px solid #20242A;
+          }
+        }
+
+        &:hover {
+          color: #999;
+        }
+      }
+    }
+
+    &-account {
+      display: flex;
+      align-items: center;
+
+      @media (max-width: 768px) {
+        display: none; // приховати іконку акаунту на мобільній версії
+      }
+
+      img {
+        width: 52px;
+        height: 52px;
+      }
+    }
+  }
+
+  &__wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width: 768px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  .balance-button {
+    display: flex;
+    align-items: center;
+    background-color: #4C84FF;
+    border-radius: 8px;
+    height: 100%;
+    width: fit-content;
+
+    @media (max-width: 768px) {
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    &__left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      background-color: #4C84FF;
+      border-radius: 8px 0 0 8px;
+    }
+
+    &__amount {
+      font-size: 16px;
+      color: white;
+    }
+
+    &__percentage {
+      background-color: #3571e2;
+      color: white;
+      font-size: 8px;
+      width: fit-content;
+      padding: 2px 3px;
+      font-weight: 900;
+      border-radius: 3px;
+    }
+
+    &__icon {
+      font-size: 16px;
+      color: white;
+    }
+
+    &__right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 0 8px 8px 0;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      height: 100%;
+      cursor: pointer;
+    }
+  }
+}
+
+.success-message {
+  position: fixed;
+  top: 150px;
+  right: -300px;
+  background-color: #28a745;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  transition: right 0.5s ease-in-out; /* Анімація виїзду */
+}
+
+.success-message.show {
+  right: 20px;
+}
